@@ -1,0 +1,207 @@
+Last login: Fri Sep  9 22:37:29 on ttys001
+(base) malcolmphillip@Malcolms-MacBook-Air 608-mod4 % ipython
+Python 3.9.12 (main, Jun  1 2022, 06:36:29) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.4.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: roman_numerals = {'I': 1, 'II':2, 'III':3, 'V':5, 'X':10]
+  Input In [1]
+    roman_numerals = {'I': 1, 'II':2, 'III':3, 'V':5, 'X':10]
+                                                            ^
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '{'
+
+
+In [2]: roman_numerals = {'I': 1, 'II':2, 'III':3, 'V':5, 'X':10]}
+  Input In [2]
+    roman_numerals = {'I': 1, 'II':2, 'III':3, 'V':5, 'X':10]}
+                                                            ^
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '{'
+
+
+In [3]: roman_numerals = {'I': 1, 'II':2, 'III':3, 'V':5, 'X':10])
+  Input In [3]
+    roman_numerals = {'I': 1, 'II':2, 'III':3, 'V':5, 'X':10])
+                                                            ^
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '{'
+
+
+In [4]: roman_numerals = ('I': 1, 'II':2, 'III':3, 'V':5, 'X':10])
+  Input In [4]
+    roman_numerals = ('I': 1, 'II':2, 'III':3, 'V':5, 'X':10])
+                         ^
+SyntaxError: invalid syntax
+
+
+In [5]: roman_numerals = {'I': 1, 'II':2, 'III':3, 'V':5, 'X':10}
+
+In [6]: roman_numerals
+Out[6]: {'I': 1, 'II': 2, 'III': 3, 'V': 5, 'X': 10}
+
+In [7]: roman_numerals['V']
+Out[7]: 5
+
+In [8]: roman_numerals['X']
+Out[8]: 10
+
+In [9]: roman_numerals['X'] = 10
+
+In [10]: roman_numerals
+Out[10]: {'I': 1, 'II': 2, 'III': 3, 'V': 5, 'X': 10}
+
+In [11]: roman_numerals['L'] = 50
+
+In [12]: roman_numerals
+Out[12]: {'I': 1, 'II': 2, 'III': 3, 'V': 5, 'X': 10, 'L': 50}
+
+In [13]: del roman_numerals['III']
+
+In [14]: roman_numerals
+Out[14]: {'I': 1, 'II': 2, 'V': 5, 'X': 10, 'L': 50}
+
+In [15]: roman_numerals.pop('X')
+Out[15]: 10
+
+In [16]: roman_numerals
+Out[16]: {'I': 1, 'II': 2, 'V': 5, 'L': 50}
+
+In [17]: roman_numerals['III']
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Input In [17], in <cell line: 1>()
+----> 1 roman_numerals['III']
+
+KeyError: 'III'
+
+In [18]: roman_numerals.get['III']
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Input In [18], in <cell line: 1>()
+----> 1 roman_numerals.get['III']
+
+TypeError: 'builtin_function_or_method' object is not subscriptable
+
+In [19]: roman_numerals.get('III')
+
+In [20]: roman_numerals.get('III', 'III not in dictionary')
+Out[20]: 'III not in dictionary'
+
+In [21]: roman_numerals.get('V')
+Out[21]: 5
+
+In [22]: 'V' in roman_numerals
+Out[22]: True
+
+In [23]: 'III' in roman_numerals
+Out[23]: False
+
+In [24]: 'III' not in roman_numerals
+Out[24]: True
+
+In [25]: romaan_numerals = {'I' = 1, 'II' = 2, 'III' = 3, 'V' = 5, 'X' = 100}
+  Input In [25]
+    romaan_numerals = {'I' = 1, 'II' = 2, 'III' = 3, 'V' = 5, 'X' = 100}
+                           ^
+SyntaxError: invalid syntax
+
+
+In [26]: roman_numerals = {'I' = 1, 'II' = 2, 'III' = 3, 'V' = 5, 'X' = 100}
+  Input In [26]
+    roman_numerals = {'I' = 1, 'II' = 2, 'III' = 3, 'V' = 5, 'X' = 100}
+                          ^
+SyntaxError: invalid syntax
+
+
+In [27]: roman_numerals = {'I': 1, 'II' : 2, 'III' : 3, 'V' : 5, 'X' : 100}
+
+In [28]: roman_numerals['x'] = 10
+
+In [29]: roman_numerals
+Out[29]: {'I': 1, 'II': 2, 'III': 3, 'V': 5, 'X': 100, 'x': 10}
+
+In [30]: print('6.2.3 Completed')
+6.2.3 Completed
+
+In [31]: months = {'January': 1, 'February': 2, 'March': 3}
+
+In [32]: for month_name in months.keys():
+    ...:     print(month_name, end =' ')
+    ...: 
+January February March 
+In [33]: for month_name in months.values():
+    ...:     print(month_name, end = ' ')
+    ...: 
+1 2 3 
+In [34]: months_view = months.key()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Input In [34], in <cell line: 1>()
+----> 1 months_view = months.key()
+
+AttributeError: 'dict' object has no attribute 'key'
+
+In [35]: months_view = months.keys()
+
+In [36]: for key in months_view:
+    ...:     print(key, end = ' ')
+    ...: 
+January February March 
+In [37]: months['December'] = 12
+
+In [38]: months
+Out[38]: {'January': 1, 'February': 2, 'March': 3, 'December': 12}
+
+In [39]: for key in months_view:
+    ...:     print(key, end = ' ')
+    ...: 
+January February March December 
+In [40]: list(months.keys())
+Out[40]: ['January', 'February', 'March', 'December']
+
+In [41]: list(months.value())
+    ...: 
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Input In [41], in <cell line: 1>()
+----> 1 list(months.value())
+
+AttributeError: 'dict' object has no attribute 'value'
+
+In [42]: list(months.values())
+Out[42]: [1, 2, 3, 12]
+
+In [43]: list(months.items())
+Out[43]: [('January', 1), ('February', 2), ('March', 3), ('December', 12)]
+
+In [44]: for month_name in sorted(months.keys)
+  Input In [44]
+    for month_name in sorted(months.keys)
+                                         ^
+SyntaxError: invalid syntax
+
+
+In [45]: for month_name in sorted(months.keys()):
+    ...:     print(month_name, end = ' ')
+    ...: 
+December February January March 
+In [46]: roman_numerals = {'I': 1, 'II' : 2, 'III' : 3, 'V' : 5}
+
+In [47]: list roman_numerals.keys()
+  Input In [47]
+    list roman_numerals.keys()
+         ^
+SyntaxError: invalid syntax
+
+
+In [48]: list(roman_numerals.keys())
+Out[48]: ['I', 'II', 'III', 'V']
+
+In [49]: list(roman_numerals.values())
+Out[49]: [1, 2, 3, 5]
+
+In [50]: list(roman_numerals.items())
+Out[50]: [('I', 1), ('II', 2), ('III', 3), ('V', 5)]
+
+In [51]: print('6.2.4 Complete by malcolm')
+6.2.4 Complete by malcolm
+
+In [52]: county_capitals1 = {'B

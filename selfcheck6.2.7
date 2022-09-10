@@ -1,0 +1,237 @@
+Last login: Fri Sep  9 23:01:47 on ttys002
+(base) malcolmphillip@Malcolms-MacBook-Air 608-mod4 % ipython
+Python 3.9.12 (main, Jun  1 2022, 06:36:29) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.4.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: text = ('This is sample text with several words' 'This is more sample text with s
+   ...: ome different words')
+
+In [2]: word_counts = {}
+
+In [3]: for word in text.split():
+   ...:     if word in word_counts:
+   ...:         word_counts[word] +=1
+   ...:     else:
+   ...:         word_counts[word] =1
+   ...: 
+
+In [4]: for word in text.split():
+   ...:     if word in word_counts:
+   ...:         word_counts[word] +=1
+   ...:     else:
+   ...:         word_counts[word] =1
+   ...: 
+   ...: print(f'{"WORD":<12}COUNT')
+WORD        COUNT
+
+In [5]: for word in text.split():
+   ...:     if word in word_counts:
+   ...:         word_counts[word] +=1
+   ...:     else:
+   ...:         word_counts[word] =1
+   ...: 
+
+In [6]:  print(f'{"WORD":<12}COUNT')
+WORD        COUNT
+
+In [7]: for word, count in sorted(word_counts.items()):
+   ...:     print(f'{word:<12}{count}')
+   ...: 
+This        3
+different   3
+is          6
+more        3
+sample      6
+several     3
+some        3
+text        6
+with        6
+words       3
+wordsThis   3
+
+In [8]: print('\nNumber of unique words:', len(word_counts))
+
+Number of unique words: 11
+
+In [9]: 
+
+In [9]: text = ('This is sample text with several words This is more sample text with som
+   ...: e different words')
+
+In [10]: print('\nNumber of unique words:', len(word_counts))
+
+Number of unique words: 11
+
+In [11]: for word, count in sorted(word_counts.items()):
+    ...:     print(f'{word:<12}{count}')
+    ...: 
+This        3
+different   3
+is          6
+more        3
+sample      6
+several     3
+some        3
+text        6
+with        6
+words       3
+wordsThis   3
+
+In [12]: text = ('This is sample text with several words This is more sample text with so
+    ...: me different words This is more sample text with even more different words than 
+    ...: ever before this very moment')
+
+In [13]: for word, count in sorted(word_counts.items()):
+    ...:     print(f'{word:<12}{count}')
+    ...: 
+This        3
+different   3
+is          6
+more        3
+sample      6
+several     3
+some        3
+text        6
+with        6
+words       3
+wordsThis   3
+
+In [14]: 
+
+In [14]: word_counts = {}
+
+In [15]: for word, count in sorted(word_counts.items()):
+    ...:     print(f'{word:<12}{count}')
+    ...: 
+
+In [16]: text = ('This is sample text with several words This is more sample text with so
+    ...: me different words This is more sample text with even more different words than 
+    ...: ever before this very moment')
+
+In [17]: for word in text.split():
+    ...:     if word in word_counts:
+    ...:         word_counts[word] +=1
+    ...:     else:
+    ...:         word_counts[word] =1
+    ...: 
+
+In [18]: word_counts = {}
+
+In [19]: for word in text.split():
+    ...:     if word in word_counts:
+    ...:         word_counts[word] +=1
+    ...:     else:
+    ...:         word_counts[word] =1
+    ...: 
+
+In [20]:  print(f'{"WORD":<12}COUNT')
+WORD        COUNT
+
+In [21]: for word, count in sorted(word_counts.items()):
+    ...:     print(f'{word:<12}{count}')
+    ...: 
+This        3
+before      1
+different   2
+even        1
+ever        1
+is          3
+moment      1
+more        3
+sample      3
+several     1
+some        1
+text        3
+than        1
+this        1
+very        1
+with        3
+words       3
+
+In [22]: text2 = ('I worked, went to the gym, went to the lakefront, then went to the gro
+    ...: cery store. I ate lunch then had a phone interview then took a quick nap before 
+    ...: i ate some more food i didnt really need to eat but decided to be a fatty at the
+    ...:  last minute. )
+  Input In [22]
+    text2 = ('I worked, went to the gym, went to the lakefront, then went to the grocery store. I ate lunch then had a phone interview then took a quick nap before i ate some more food i didnt really need to eat but decided to be a fatty at the last minute. )
+                                                                                                                                                                                                                                                                   ^
+SyntaxError: EOL while scanning string literal
+
+
+In [23]: text2 = ('I worked, went to the gym, went to the lakefront, then went to the gro
+    ...: cery store. I ate lunch then had a phone interview then took a quick nap before 
+    ...: i ate some more food i didnt really need to eat but decided to be a fatty at the
+    ...:  last minute.')
+
+In [24]: text2 = ('I worked, went to the gym, went to the lakefront, then went to the gro
+    ...: cery store' 'I ate lunch then had a phone interview then took a quick nap before
+    ...:  i ate some more food i didnt really need to eat but decided to be a fatty at th
+    ...: e last minute')
+
+In [25]: word_counts = {}
+
+In [26]: for word in text2.split():
+    ...:     if word in word_counts:
+    ...:         word_counts[word] +=1
+    ...:     else:
+    ...:         word_counts[word] =1
+    ...: 
+
+In [27]:  print(f'{"WORD":<12}COUNT')
+WORD        COUNT
+
+In [28]: for word, count in sorted(word_counts.items()):
+    ...:     print(f'{word:<12}{count}')
+    ...: 
+I           1
+a           3
+at          1
+ate         2
+be          1
+before      1
+but         1
+decided     1
+didnt       1
+eat         1
+fatty       1
+food        1
+grocery     1
+gym,        1
+had         1
+i           2
+interview   1
+lakefront,  1
+last        1
+lunch       1
+minute      1
+more        1
+nap         1
+need        1
+phone       1
+quick       1
+really      1
+some        1
+storeI      1
+the         4
+then        3
+to          5
+took        1
+went        3
+worked,     1
+
+In [29]: print('\nNumber of unique words:', len(word_counts))
+
+Number of unique words: 35
+
+In [30]: print('6.2.7 completed')
+6.2.7 completed
+
+In [31]: print malcolm phillip
+  Input In [31]
+    print malcolm phillip
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(malcolm phillip)?
+
+
+In [32]: 
